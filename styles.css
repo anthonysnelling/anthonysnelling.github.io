@@ -139,6 +139,11 @@ a:active{
     padding: 10px 0;
     height: 150px;
   }
+
+  #videoStyle {
+    position: relative;
+    left: 25%;
+  }
   
   /* Add Animation - Zoom in the Modal */
   .modal-content, #caption { 
