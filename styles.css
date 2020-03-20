@@ -12,9 +12,19 @@
     margin-bottom: 10px;
 }
 #videoSetup{
-    position: absolute;
-    left: 25%;
+    position: relative;
+    left: 20%;
     top: 20%;
+  margin-bottom: 0px;
+
+}
+
+#videoSetup2{
+  position: relative;
+  left: 20%;
+  top: 20%;
+  margin-left: 230px;
+  margin-bottom: 0px;
 }
 #textSetup{
     position: absolute;
@@ -92,6 +102,21 @@ a:active{
       flex: 50%;
       max-width: 50%;
     }
+
+    #videoSetup{
+      position: relative;
+      left: 10%;
+      top: 20%;
+    margin-bottom: 0px;  
+  }
+
+  #videoSetup2{
+    position: relative;
+    left: 0%;
+    top: 20%;
+    margin-left: 60px;
+    margin-bottom: 0px;
+}
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
