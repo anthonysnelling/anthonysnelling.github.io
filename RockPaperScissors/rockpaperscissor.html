@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+ <main>
+  <div id="play-area">
+
+  <div id="selections">
+    
+    <div></div>
+  <img src="standIn.png" alt="rock, paper or scissors" id="playerImage">
+  <img src="standIn.png" alt="rock, paper or scissors" id="computerImage">
+    <div></div>
+  </div>
+
+  <div id="choice-grid">
+    <div></div>
+    <button id="rock-button" value="rock">
+  <img src="rock.png" alt="picture of rock" class="choiceDisplay">
+      </button>
+
+      <button id="paper-button" value="paper">
+  <img src="paper.png" alt="picture of paper" class="choiceDisplay">
+       </button>
+    
+       <button id="scissors-button" value="scissors">
+  <img src="scissors.png" alt="picture of scissors" class="choiceDisplay">
+    </button>
+  <div></div>
+  </div>
+
+  <div id="score-board">
+  <h2 id="player-prompt">CHOOSE! First to 3! Round 1!</h2>
+    <h3 id="player-score-count">Your Score: 0</h3>
+    <h3 id="computer-score-count">Computer Score : 0</h3>
+  </div>
+
+  <div id="resetBox">  
+    <button id="Reset">RESET GAME</button>
+  </div>
+
+
+  </div>
+
+</main>
+
+  <script>
+    let playerWins = 0;
+    let computerWins = 0;
+    let roundNumber = 1;
+    let gameState = 0;
+
+    document.getElementById("rock-button").addEventListener("click", function() { playerchoice("rock"); } );
+    document.getElementById("paper-button").addEventListener("click", function() { playerchoice("paper"); } );
+    document.getElementById("scissors-button").addEventListener("click", function() { playerchoice("scissors"); } );
+    document.getElementById("Reset").addEventListener("click", function() { reset(); } );
+
+      function computerPlay(){
+         //write a function that makes the computer return
+         // a random choice
+         let compChoice = Math.floor(Math.random() * 3 );
+         console.log(compChoice);
+         choices = ["rock", "paper", "scissors"];
+         if(gameState == 0){
+
+         switch(compChoice) {
+           case 0: 
+              document.getElementById("computerImage").src = "rock.png";
+              return "rock";
+           case 1:
+             document.getElementById("computerImage").src = "paper.png";
+             return "paper";
+           case 2:
+             document.getElementById("computerImage").src = "scissors.png";
+             return "scissors" 
+         }
+
+        }
+      }
+
+      function playerchoice(valOfButton){
+        if (gameState == 0) {
+          
+        if (valOfButton == "rock"){
+          document.getElementById("playerImage").src = "rock.png";
+          return roundPlay("rock", computerPlay());
+        }
+        if (valOfButton == "paper"){
+          document.getElementById("playerImage").src = "paper.png";
+          return roundPlay("paper", computerPlay());
+        }
+        if (valOfButton == "scissors"){
+          document.getElementById("playerImage").src = "scissors.png";
+          return roundPlay("scissors", computerPlay());
+        }
+
+        }
+      }
+
+      function roundPlay(playerSelection, computerSelection){
+        // write a function that takes the parameters, compares them
+        // then returns a string of the winner. (should be case insensitive, so player can type rock or ROCK, etc.)
+        //use prompt to get input from user
+        
+         if(gameState == 0){
+           if(playerSelection == computerSelection){
+           return game("It's a draw!");
+         }
+         else if(playerSelection == "rock" && computerSelection == "scissors"){
+            playerWins++;
+            document.getElementById("player-score-count").innerHTML = "Your score: " + playerWins;
+            return game("You Win!");
+         }
+         else if(playerSelection == "scissors" && computerSelection == "rock"){
+           computerWins++;
+            document.getElementById("computer-score-count").innerHTML = "Computer score: " + computerWins;
+           return game("You Lost!");
+         }
+         else if(playerSelection == "rock" && computerSelection == "paper"){
+            computerWins++;
+            document.getElementById("computer-score-count").innerHTML = "Computer score: " + computerWins;
+            return game("You Lost!");
+         }
+         else if(playerSelection == "paper" && computerSelection == "rock"){
+           playerWins++;
+            document.getElementById("player-score-count").innerHTML = "Your score: " + playerWins;
+           return game("You Won!");
+         }
+          else if(playerSelection == "scissors" && computerSelection == "paper"){
+            playerWins++;
+            document.getElementById("player-score-count").innerHTML = "Your score: " + playerWins;
+            return game("You Won!");
+         }
+         else if(playerSelection == "paper" && computerSelection == "scissors"){
+           computerWins++;
+            document.getElementById("computer-score-count").innerHTML = "Computer score: " + computerWins;
+           return game("You Lost!");
+         }
+        }
+
+      }
+
+      function game(result){
+        //use this function to play a 5 round game using roundPlay()
+        // should keep score and report a winner or loser at the end
+          roundNumber++;
+          document.getElementById("player-prompt").innerHTML = result + " round " + roundNumber;
+          if(playerWins == 3 || computerWins == 3){
+             if(playerWins == 3 && computerWins != 3){
+               document.getElementById("player-prompt").innerHTML = "Game Over! You WIN! Reset to continue.";
+             }
+             else if(computerWins == 3 && playerWins != 3){
+               document.getElementById("player-prompt").innerHTML = "Game Over! You LOSE! Reset to continue.";
+             }
+             gameState = 1;
+          } 
+      }
+
+      function reset(){
+        playerWins = 0;
+        computerWins = 0;
+        roundNumber = 0;
+        gameState = 0;
+        document.getElementById("playerImage").src = "standIn.png";
+        document.getElementById("computerImage").src = "standIn.png";
+        document.getElementById("player-prompt").innerHTML = "CHOOSE! first to 3! Round 1!"
+        document.getElementById("player-score-count").innerHTML = "Your score: " + 0;
+        document.getElementById("computer-score-count").innerHTML = "Computer score: " + 0; 
+      }
+  </script>
+</body>
+</html>
+
