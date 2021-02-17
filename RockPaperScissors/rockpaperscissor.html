@@ -61,8 +61,6 @@
     document.getElementById("Reset").addEventListener("click", function() { reset(); } );
 
       function computerPlay(){
-         //write a function that makes the computer return
-         // a random choice
          let compChoice = Math.floor(Math.random() * 3 );
          console.log(compChoice);
          choices = ["rock", "paper", "scissors"];
@@ -102,11 +100,7 @@
         }
       }
 
-      function roundPlay(playerSelection, computerSelection){
-        // write a function that takes the parameters, compares them
-        // then returns a string of the winner. (should be case insensitive, so player can type rock or ROCK, etc.)
-        //use prompt to get input from user
-        
+      function roundPlay(playerSelection, computerSelection){       
          if(gameState == 0){
            if(playerSelection == computerSelection){
            return game("It's a draw!");
@@ -146,9 +140,7 @@
       }
 
       function game(result){
-        //use this function to play a 5 round game using roundPlay()
-        // should keep score and report a winner or loser at the end
-          roundNumber++;
+         roundNumber++;
           document.getElementById("player-prompt").innerHTML = result + " round " + roundNumber;
           if(playerWins == 3 || computerWins == 3){
              if(playerWins == 3 && computerWins != 3){
