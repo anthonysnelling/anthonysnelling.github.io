@@ -41,7 +41,14 @@
                     <li> <a href="skills.html"> Skills </a> </li>
                     <li> <a href="contact.html"> Contact </a> </li>
                     <li> <a href="RockPaperScissors/rockpaperscissor.html">Rock paper scissors game!</a> </li>
-                    <li> <a href="EtchASketch/EtchASketch.html">EtchASketch browser app</a> </li>
+                    <nav>
+                        <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
+                          Home
+                        </a>
+                        <a href="/about.html" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
+                          About
+                        </a>
+                      </nav><li> <a href="EtchASketch/EtchASketch.html">EtchASketch browser app</a> </li>
                     <li> <a href="CalculatorWebApp/calculator.html"> An online calculator </a> </li>
                     <li> <a href="DodgeTheCreeps.html"> Game! </a> </li>
         </ul>
