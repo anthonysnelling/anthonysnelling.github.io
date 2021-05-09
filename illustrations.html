@@ -46,7 +46,54 @@
 
     <!--TextCode-->
     <main id="mainContent-index">
-     
+
+     <!-- Thumbnails to click on -->
+     <div class="row"> 
+      <div class="column">
+        <img class="myImg" src="Images/illustrations/Snelling Render 2 interiorv2.jpg" onclick="openImage(1);" alt="A Render of a house I built for my Environment design class.">
+        <img class="myImg" src="Images/illustrations/BlendDonut.jpg" onclick="openImage(2);">
+        <img class="myImg" src="Images/illustrations/MGTONY.jpg" onclick="openImage(3);">              
+        <img class="myImg" src="Images/illustrations/Guitar.jpg" onclick="openImage(4);">
+        <img class="myImg" src="Images/illustrations/The Octopus Has No Friends.jpg" onclick="openImage(5);"> 
+      </div>
+
+      <div class="column">
+        <img class="myImg" src="Images/illustrations/Snelling Render 3 interiorv4.jpg" onclick="openImage(6);">
+        <img class="myImg" src="Images/illustrations/Thing3TennisLemon.jpg" onclick="openImage(7);">
+        <img class="myImg" src="Images/illustrations/St.Basil's.jpg" onclick="openImage(8);">
+        <img class="myImg" src="Images/illustrations/Snelling_Post_Apocalyptic.jpg" onclick="openImage(9);">
+        <img class="myImg" src="Images/illustrations/Thing 1 Diffusion Effect.jpg" onclick="openImage(10);">
+        <img class="myImg" src="Images/illustrations/Thing3TennisLemon.jpg" onclick="openImage(11);">
+      </div> 
+
+      <div class="column">
+        <img class="myImg" src="Images/illustrations/Snelling Render 4 interiorv.jpg" onclick="openImage(12);">
+        <img class="myImg" src="Images/illustrations/Thing2DoubleExposure.jpg" onclick="openImage(13);">
+        <img class="myImg" src="Images/illustrations/room15.png" onclick="openImage(14);">
+        <img class="myImg" src="Images/illustrations/Snelling Still life Improved Rasterized.jpg" onclick="openImage(15);">
+        <img class="myImg" src="Images/illustrations/Project3 cropped2.png" onclick="openImage(16);">
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">Exit&times;</span>
+        <img id="theImg" src="" alt="">
+    </div>
+
+      <script>
+        var imageCollection = document.images;
+        function openImage(i){
+          document.getElementById("myModal").style.display = "block";
+          displayedImage = imageCollection[i].src;
+          document.getElementById("theImg").src = displayedImage;
+        }
+
+        function closeModal(){
+          document.getElementById("myModal").style.display = "none";
+        }
+
+      </script> 
+      
     </main>
 
  <footer>
