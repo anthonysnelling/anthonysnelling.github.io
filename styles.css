@@ -33,6 +33,7 @@ body {
   color: white;
   font-size: 2em;
   size: 2em;
+  max-height: 999999999px;
 }
 
 .navBar {
