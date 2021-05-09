@@ -21,84 +21,41 @@
 
 
 <!-- Start of Body -->
-<body style="background-color: black; color: white" >
+<body>
 
-    <div style="position: relative; margin-left: 40px;">
+    <div id="gridLayout">
 
         <!--Logo-->
-        <img src="Images/MYLogo.png" alt="My Logo" style="margin-left: 20px; margin-bottom: 20px; margin-top: 20px; width: 150px;">
 
-        <h1 id="title">ANTHONY'S <br> ANIMATIONS</h1>
+        <div id="logoContainer">
+        <img src="../Images/MYLogo.png" id="logoStyle">
+
+        <h1 id="title">ANTHONY'S ALCHEMY</h1>
+        </div>
 
         <!--NavBar-->
-        <nav>
-            <ul id="listNav" style="list-style: none; padding: 0px;">
-                <li> <a href="index.html" > Home </a></li>
-                <li> <a href="demoReel.html"> Videos </a></li>
-                <li> <a href="illustrations.html" style="color: rgb(255, 217, 0);"> Pictures </a> </li>
-                <li> <a href="blog.html"> Blog </a> </li>
-                <li> <a href="about.html"> About </a> </li>
-                <li> <a href="RockPaperScissors/rockpaperscissor.html">Rock paper scissors game!</a> </li>
-                <li> <a href="EtchASketch/EtchASketch.html">EtchASketch browser app</a> </li>
-                <li> <a href="CalculatorWebApp/calculator.html"> An online calculator </a> </li>
-                <li> <a href="DodgeTheCreeps.html"> Game! </a> </li>
-        </ul>
+        <nav id="navContainer">
+            <ul class="navBar" id="listNav" style="list-style: none;">
+                    <li> <a href="index.html" > HOME </a></li>
+                    <li> <a href="demoReel.html"> VIDEOS </a></li>
+                    <li> <a href="illustrations.html" style="color: rgb(255, 217, 0);" > ART </a> </li>
+                    <li> <a href="myblog/blog.html"> BLOG </a> </li>
+                    <li> <a href="aboutMe.html"> ABOUT ME </a> </li>
+            </ul>
         </nav>
 
-    </div>
-
     <!--TextCode-->
-    <h1 id="textSetup">Here are some images I have made. </h1>
+    <main id="mainContent-index">
+     
+    </main>
 
+ <footer>
+    <div id="footer">copyright 2016-2021 Anthony Snelling/ Anthony's ALCHEMY, all rights reserved</div>
+</footer>
 
-    <!-- Thumbnails to click on -->
-    <div class="row"> 
-            <div class="column">
-              <img class="myImg" src="Images/illustrations/Snelling Render 2 interiorv2.jpg" onclick="openImage(1);" alt="A Render of a house I built for my Environment design class.">
-              <img class="myImg" src="Images/illustrations/BlendDonut.jpg" onclick="openImage(2);">
-              <img class="myImg" src="Images/illustrations/MGTONY.jpg" onclick="openImage(3);">              
-              <img class="myImg" src="Images/illustrations/Guitar.jpg" onclick="openImage(4);">
-              <img class="myImg" src="Images/illustrations/The Octopus Has No Friends.jpg" onclick="openImage(5);"> 
-            </div>
-
-            <div class="column">
-              <img class="myImg" src="Images/illustrations/Snelling Render 3 interiorv4.jpg" onclick="openImage(6);">
-              <img class="myImg" src="Images/illustrations/Thing3TennisLemon.jpg" onclick="openImage(7);">
-              <img class="myImg" src="Images/illustrations/St.Basil's.jpg" onclick="openImage(8);">
-              <img class="myImg" src="Images/illustrations/Snelling_Post_Apocalyptic.jpg" onclick="openImage(9);">
-              <img class="myImg" src="Images/illustrations/Thing 1 Diffusion Effect.jpg" onclick="openImage(10);">
-              <img class="myImg" src="Images/illustrations/Thing3TennisLemon.jpg" onclick="openImage(11);">
-            </div> 
-
-            <div class="column">
-              <img class="myImg" src="Images/illustrations/Snelling Render 4 interiorv.jpg" onclick="openImage(12);">
-              <img class="myImg" src="Images/illustrations/Thing2DoubleExposure.jpg" onclick="openImage(13);">
-              <img class="myImg" src="Images/illustrations/room15.png" onclick="openImage(14);">
-              <img class="myImg" src="Images/illustrations/Snelling Still life Improved Rasterized.jpg" onclick="openImage(15);">
-              <img class="myImg" src="Images/illustrations/Project3 cropped2.png" onclick="openImage(16);">
-            </div>
-          </div>
-
-          <div id="myModal" class="modal">
-              <span class="close cursor" onclick="closeModal()">&times;</span>
-              <img id="theImg" src="" alt="">
-          </div>
-
-            <script>
-              var imageCollection = document.images;
-              function openImage(i){
-                document.getElementById("myModal").style.display = "block";
-                displayedImage = imageCollection[i].src;
-                document.getElementById("theImg").src = displayedImage;
-              }
-
-              function closeModal(){
-                document.getElementById("myModal").style.display = "none";
-              }
-
-            </script>
-
+</div>
 
 </body>
+
 
 </html>
