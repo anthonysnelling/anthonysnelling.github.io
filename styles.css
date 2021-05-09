@@ -136,7 +136,7 @@ a:active {
   text-decoration: none;
 }
 
-/* Add a hover effect (blue shadow) */
+/* Add a hover effect (yellow shadow) */
 .projectImage:hover {
   box-shadow: 0 0 10px 1px rgb(255, 217, 0);
   cursor: pointer;
