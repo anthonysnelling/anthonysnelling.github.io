@@ -1,2 +1,295 @@
 
 @import "main";
+
+body {
+  background-image: url("Images/inverted-linear-illustration-of-geometric-shapes-vector.webp");
+  background-repeat: repeat;
+  background-size: 35em;
+  background-color: black;
+  margin: 0;
+}
+
+#gridLayout{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 275px 80px 1fr;
+
+  grid-template-areas: "logoContainer"
+                       "navContainer"
+                       "mainContent";
+}
+
+#logoContainer {
+  grid-area: logoContainer;
+  display: grid;
+  justify-content: center;
+}
+
+#logoStyle {
+  width: 10em;
+  justify-self: center;
+}
+
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  color: white;
+  font-size: 2em;
+  size: 2em;
+  max-height: 999999999px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#listNav {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#textSetup {
+  font-size: 22px;
+  color: rgb(206, 206, 206);
+}
+#mainContent-index{
+  margin: 1em 0em 0em 0em;
+  grid-area: mainContent;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  grid-template-areas: 
+                        "title1   title2"
+                        "project1  project2"
+                        "title3   title4"
+                        "project3  project4";
+}
+
+#mainContent-aboutMe{
+  grid-area: mainContent;
+  display: grid;
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  padding: 2em;
+  width: 70em;
+  background-color: rgb(46, 51, 61);
+  border-style: inset;
+  border-width: 0.2em;
+  border-color: rgb(255, 195, 66);
+  border-radius: 10px;
+}
+
+.projectBox {
+  font-size: 1.2em;
+  color: rgb(206, 206, 206);
+  background-color: rgb(46, 51, 61);
+  text-align: center;
+  width: 30em;
+  padding: 1em;
+  justify-content: center;
+  align-content: center;
+}
+
+.projectBox-title {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #121316;
+  background-color: rgb(255, 195, 66);
+  border-style: solid;
+  border-width: 0.1em;
+  border-color: rgb(255, 195, 66);
+  text-align: center;
+  align-content: center;
+  height: 2em;
+  padding-top: 1em;
+}
+
+.projectImage {
+  width: 25em;
+}
+
+#footer {
+  background-color: #121316;
+  color: rgb(68, 74, 87);
+  margin-top: 25vh;
+  padding: 30px 0px;
+  width: 100%;
+  border-top: 1px solid rgb(38, 52, 75);
+  text-align: center;
+}
+
+a:link {
+  color: #e2e2e2;
+  text-decoration: none;
+}
+a:visited {
+  color: #e2e2e2;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a hover effect (yellow shadow)*/
+.projectImage:hover {
+  box-shadow: 0 0 10px 1px rgb(255, 217, 0);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.myImg:hover {
+  box-shadow: 0 0 10px 1px rgb(255, 217, 0);
+  cursor: pointer;
+  transition: .5s;
+}
+
+/*<-------- Flex box CSS------->*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*<------- The Modal -------->*/
+
+/* The Modal (background) */
+.modalImage {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-contentImage {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ff0000;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(255, 0, 0);
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
