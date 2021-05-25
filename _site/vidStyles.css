@@ -1,0 +1,13 @@
+#mainContent-Videos {
+  margin: 1em 0em 0em 0em;
+  grid-area: mainContent-Videos;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2;
+  grid-template-rows: 4;
+  grid-template-areas: 
+                        "title1   title2"
+                        "project1  project2"
+                        "title4   title4"
+                        "project4  project4";
+}
