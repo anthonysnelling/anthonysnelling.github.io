@@ -1,0 +1,35 @@
+.gridBlocks{
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* .gridBlocks:hover {
+    background-color: yellow;
+} */
+
+#mainContainer {
+    display: grid;
+    margin: 2rem auto;
+    max-width: 500px;
+    min-height: 500px;
+    background-color: white;
+    grid-template-columns: repeat(16, 1fr);
+    border: 2px solid;
+}
+
+body {
+    background-color: coral;
+}
+
+@media (max-width: 450px) {
+    #mainContainer {
+        max-width: 300px;
+        min-height: 300px;
+    }
+}
+
+#resetContainer {
+    display: flex;
+    justify-content: center;
+
+}

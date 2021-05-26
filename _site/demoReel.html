@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+<head>
+<meta charset= "UTF-8">
+<meta name="description" content="A portfolio for Anthony Snelling's Art and Code">
+<meta name="keywords" content="animation, coding, portfolio, blog, programming"/>
+<meta name="copyright" content="Copyright Anthony Snelling">
+<meta name="designer" content="Designed by Anthony Snelling">
+
+<title>Tony's Webpage</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="vidStyles.css" />
+
+<!--FavIcon-->
+<link href="../Images/MYLogo.png" rel="icon" type="image/x-icon"/>
+
+</head>
+
+
+<!-- Start of Body -->
+<body>
+
+    <div id="gridLayout">
+
+        <!--Logo-->
+
+        <div id="logoContainer">
+        <img src="../Images/MYLogo.png" id="logoStyle">
+
+        <h1 id="title">ANTHONY'S ALCHEMY</h1>
+        </div>
+
+        <!--NavBar-->
+        <nav id="navContainer">
+            <ul class="navBar" id="listNav" style="list-style: none;">
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="demoReel.html" style="color: rgb(255, 217, 0);"> VIDEOS </a></li>
+                    <li> <a href="illustrations.html" > ART </a> </li>
+                    <li> <a href="myblog/blog.html"> BLOG </a> </li>
+                    <li> <a href="aboutMe.html"> ABOUT ME </a> </li>
+            </ul>
+        </nav>
+
+    <!--VideoCodes--> 
+    <main id="mainContent-Videos" style="grid-area: mainContent;">
+        <div class="projectBox-title" style="grid-area: title1;">ANIMATION REEL</div>
+        <div class="projectBox-title" style="grid-area: title2;">BATTLE BALL GAME</div>
+        <div class="projectBox" style="border-right: dashed; border-width: 0.1em; border-color: rgb(255, 195, 66); grid-area: project1;">
+                <iframe src="https://player.vimeo.com/video/150230118" width="550" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="projectImage"></iframe>
+                <p></p>
+        </div>
+        <div class="projectBox" style="grid-area: project2"> 
+                <iframe src="https://player.vimeo.com/video/306894461" width="550" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="projectImage"></iframe>
+                <p> A game I made for a class using Unity</p>
+        </div>
+        <div class="projectBox-title" style="grid-area: title4;">TOWER DEFENSE</div>
+        <div class="projectBox" style="grid-area: project4; width: auto;">
+            <iframe src="https://player.vimeo.com/video/399252278" width="700" height="380" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="projectImage"></iframe>
+            <p> A game I made for an independent study </p>
+        </div>
+    </main>
+
+ <footer>
+    <div id="footer">copyright 2016-2021 Anthony Snelling/ Anthony's ALCHEMY, all rights reserved</div>
+</footer>
+
+</div>
+
+</body>
+
+
+</html>
+

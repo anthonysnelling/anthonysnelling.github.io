@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <!-- create an html calc
+    buttons for each digit each of the above functions and equals key
+    display is needed -->
+    
+      <div class="calculatorContainer">
+
+
+        <div class="calculatorKeys">
+          <div class="calculatorDisplay">0</div>
+
+          <button id="zeroButton" class="calcButtons">0</button>
+          <button id="oneButton" class="calcButtons" >1</button>
+          <button id="twoButton" class="calcButtons" >2</button>
+          <button id="threeButton" class="calcButtons">3</button>
+          <button id="fourButton" class="calcButtons">4</button>
+          <button id="fiveButton" class="calcButtons">5</button>
+          <button id="sixButton" class="calcButtons">6</button>
+          <button id="sevenButton" class="calcButtons">7</button>
+          <button id="eightButton" class="calcButtons">8</button>
+          <button id="nineButton" class="calcButtons">9</button>
+          <button id="plusButton" class="operatorButtons" data-action="add">+</button>
+          <button id="minusButton" class="operatorButtons" data-action="subtract">-</button>
+          <button id="multiplyButton" class="operatorButtons" data-action="multiply">&times;</button>
+          <button id="divideButton" class="operatorButtons" data-action="divide">÷</button>
+          <button id="decimalButton" class="decimalButton" data-action="decimal">.</button>
+          <button id="clearButton" class="calcButtons" data-action="clear">CE</button>
+          <button id="equalsButton" class="equalKey" data-action="calculate">=</button>
+        </div>
+
+      </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
