@@ -25,6 +25,7 @@ function addBookToLibrary() {
 
   if (newBook.name.trim() == "" || newBook.name.length == 0) {
     alert("You didn't put a title!");
+    notInLibrary = false;
   } else if (newBook.author.trim() == "" || newBook.author.length == 0) {
     alert("You didn't put a author!");
   } else if (
@@ -90,7 +91,6 @@ function displayLibrary() {
   }
 }
 
-//TODO: Write a way to toggle the read status of a book probably keep track of the index in the object and then delete
 function toggleReadStatus(book) {
   for (const entry in myLibrary) {
     if (myLibrary[entry].name == book.target.nameParam) {
