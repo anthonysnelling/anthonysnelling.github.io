@@ -45,7 +45,7 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
     displayLibrary();
   } else {
-    alert("Book is already in library!");
+    alert("Book is already in library or contains incorrect information!");
   }
 }
 
