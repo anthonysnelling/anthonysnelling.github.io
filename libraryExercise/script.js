@@ -28,11 +28,13 @@ function addBookToLibrary() {
     notInLibrary = false;
   } else if (newBook.author.trim() == "" || newBook.author.length == 0) {
     alert("You didn't put a author!");
+    notInLibrary = false;
   } else if (
     newBook.numOfPages.trim() == "" ||
     newBook.numOfPages.length == 0
   ) {
     alert("You didn't put a number of pages!");
+    notInLibrary = false;
   } else {
     for (const book in myLibrary) {
       if (myLibrary[book].name == newBook.name) {
