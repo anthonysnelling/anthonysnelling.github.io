@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colorcodes.css" />
+    <title>Color Code Guess Game</title>
+</head>
+<body>
+    <h1>Guess the color code!</h1>
+    <div class="gameContainer">
+        <div id="colorBox"></div>
+    </div>
+    <div class="gameContainer">
+        <select id="optionList">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <button id="guessButton" onclick="checkGuess()">Submit</button>
+    </div>
+    <div class="gameContainer">
+        <h1 id="GameOverBanner">Game Over!</h1>
+    </div>
+    <div class="gameContainer" id="gameOverBox">
+        <div id="Guesses"></div>
+        <p id="Answers"></p>
+    </div>
+    <script src="game.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(92, 92, 92);
+}
+.gameContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.gameContainer#gameOverBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+#colorBox{
+    align-self: center;
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+}
+#GameOverBanner{
+    color: red;
+    text-shadow: 8px 4px black;
+    visibility: hidden;
+}
+#Guesses{
+    text-shadow: 2px 2px black;
+}
+#Answers{
+    color: white;
+    text-shadow: 2px 2px black;
+    margin: 0px;
+}
